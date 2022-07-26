@@ -93,10 +93,12 @@ export const User = () => {
               </>
             )}
           </>
-        ) : (
+        ) : user.id ? (
           <>
             as <i>individual</i>
           </>
+        ) : (
+          ''
         )}
       </p>
     </div>
