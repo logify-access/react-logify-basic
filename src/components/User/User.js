@@ -78,6 +78,27 @@ export const User = () => {
           </div>
         </div>
       )}
+
+      <p className='user'>
+        {user.id ? <b>Logged in</b> : 'Not logged in '}{' '}
+        {user.organization ? (
+          <>
+            {user.organization.internal ? (
+              <>
+                as <i>internal staff member</i>
+              </>
+            ) : (
+              <>
+                as <i>external staff member</i>
+              </>
+            )}
+          </>
+        ) : (
+          <>
+            as <i>individual</i>
+          </>
+        )}
+      </p>
     </div>
   );
 };
