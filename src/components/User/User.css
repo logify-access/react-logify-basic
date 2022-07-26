@@ -1,0 +1,65 @@
+.organization {
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+}
+.organization label,
+.user label {
+  color: #bbb;
+  font-size: 12px;
+}
+.organization .id,
+.user .id {
+  float: right;
+  text-align: right;
+}
+.organization img {
+  float: left;
+  height: 80px;
+  margin-right: 10px;
+}
+.organization .name {
+  line-height: 80px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.user {
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+  font-size: 0.9em;
+}
+.user img {
+  float: left;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 40%;
+}
+.user .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+.user .timezone {
+  float: right;
+  text-align: right;
+}
+.user .timezone .time {
+  font-size: 0.8em;
+}
+.user .designation {
+  font-weight: bold;
+  color: #e71f1f;
+}
+.user .languages {
+  overflow: hidden;
+}
+.user .language {
+  float: left;
+  background: #3c8dde;
+  padding: 0 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin: 5px 5px 0 0;
+}
