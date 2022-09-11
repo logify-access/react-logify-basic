@@ -14,17 +14,12 @@ export const LogifyAuthProvider = ({ children }) => {
     localStorage.setItem('logifyAuthData', JSON.stringify(logifyAuthData));
   }, [logifyAuthData]);
 
-  useEffect(() => {
-    window.addEventListener('message', onLoginMessage, false);
-    return () => {
-      window.removeEventListener('message', onLoginMessage);
-    };
-  }, []);
-
   const onLoginMessage = (event) => {
     if (event.origin !== 'https://logify.id') return;
     if (event.data.user) setLogifyAuthData(event.data);
   };
+
+  window.addEventListener('message', onLoginMessage, false);
 
   const auth = {
     onLogin: () =>
