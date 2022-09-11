@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useLogifyAuth } from '../../LogifyAuthContext';
 import { localCurrentDateTimeString } from '../../util/localCurrentDateTimeString';
+import { useLogify } from 'react-logify';
 import './User.css';
 
 const LanguageNames = new Intl.DisplayNames('en', { type: 'language' });
 
 export const User = () => {
-  const { user, onLogin, onLogout } = useLogifyAuth();
+  const { user, onLogin, onLogout } = useLogify();
 
   const [currentTime, setCurrentTime] = useState('');
   useEffect(() => {
